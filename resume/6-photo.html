@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ayush Bhagwate — Résumé (Photo)</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{--ink:#0f172a;--soft:#334155;--faint:#64748b;--line:#e2e8f0;--side:#0f2b46;--accent:#0891b2;--accent2:#0ea5a4}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#e9edf3;font-family:"Inter",system-ui,sans-serif;color:var(--ink);line-height:1.55;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .toolbar{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:50;display:flex;gap:.6rem;background:#fff;border:1px solid var(--line);border-radius:999px;padding:.4rem .5rem;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+  .toolbar button,.toolbar a{font:inherit;font-size:.85rem;font-weight:600;border:0;border-radius:999px;padding:.45rem .95rem;cursor:pointer;text-decoration:none}
+  .toolbar .print{background:linear-gradient(120deg,var(--accent),var(--accent2));color:#fff}
+  .toolbar .back{background:#f3f4f6;color:var(--soft)}
+  .page{width:210mm;min-height:297mm;height:297mm;margin:90px auto 40px;background:#fff;display:grid;grid-template-columns:70mm 1fr;box-shadow:0 10px 40px rgba(0,0,0,.15);overflow:hidden}
+  /* sidebar with photo */
+  .side{background:var(--side);color:#dbeafe;padding:10mm 8.5mm}
+  .photo{width:38mm;height:38mm;border-radius:50%;margin:0 auto 4.5mm;position:relative;overflow:hidden;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));border:2.5mm solid rgba(255,255,255,.12)}
+  .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .photo span{font-size:13mm;font-weight:700;color:#fff;font-family:"Inter"}
+  .side h2{font-size:3.4mm;text-transform:uppercase;letter-spacing:.14em;color:#7dd3fc;margin:5mm 0 2.5mm;border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:1.3mm}
+  .side .row{display:flex;gap:2.5mm;font-size:3.3mm;margin-bottom:2mm;align-items:flex-start;word-break:break-word}
+  .side .row svg{width:4mm;height:4mm;fill:#7dd3fc;flex:none;margin-top:.4mm}
+  .side a{color:#dbeafe;text-decoration:none}
+  .skillcat{font-size:3.4mm;font-weight:600;color:#fff;margin:3mm 0 1.5mm}
+  .chips{display:flex;flex-wrap:wrap;gap:1.6mm}
+  .chips span{font-size:3.1mm;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:1.6mm;padding:1mm 2.2mm;color:#e0f2fe}
+  .side ul{list-style:none;font-size:3.3mm}
+  .side ul li{margin-bottom:1.6mm;padding-left:4mm;position:relative}
+  .side ul li::before{content:"▹";position:absolute;left:0;color:var(--accent2)}
+  /* main */
+  .main{padding:10mm 11mm}
+  .name{font-family:"Newsreader",serif;font-weight:600;font-size:11.5mm;line-height:1.02;letter-spacing:-.01em}
+  .role{font-size:4.4mm;font-weight:600;color:var(--accent);margin:1mm 0 3mm}
+  .main h2{font-family:"Newsreader",serif;font-weight:600;font-size:5.2mm;color:var(--ink);border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:1mm;margin:3.6mm 0 2.4mm}
+  .summary{font-size:3.7mm;color:var(--soft)}
+  .item{margin-bottom:3.2mm}
+  .item .top{display:flex;justify-content:space-between;gap:4mm;align-items:baseline}
+  .item .t{font-size:4.3mm;font-weight:700}
+  .item .d{font-size:3.3mm;color:var(--faint);white-space:nowrap}
+  .item .org{font-size:3.7mm;color:var(--accent);font-weight:600;margin:.3mm 0 1.3mm}
+  .item ul{list-style:none;font-size:3.7mm;color:var(--soft)}
+  .item ul li{position:relative;padding-left:4.5mm;margin-bottom:1mm}
+  .item ul li::before{content:"•";position:absolute;left:.8mm;color:var(--accent);font-weight:700}
+  .proj{margin-bottom:2.4mm}
+  .proj .t{font-size:4mm;font-weight:700}
+  .proj .tech{font-size:3.3mm;color:var(--accent2);font-weight:600}
+  .proj p{font-size:3.6mm;color:var(--soft)}
+  .edu .t{font-size:4mm;font-weight:700}
+  .edu .m{font-size:3.5mm;color:var(--faint)}
+  @media print{body{background:#fff}.toolbar{display:none}.page{margin:0;box-shadow:none;width:auto;height:297mm;overflow:hidden}@page{size:A4;margin:0}}
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <button class="print" onclick="window.print()">⬇ Save as PDF</button>
+  <a class="back" href="index.html">← Templates</a>
+</div>
+
+<div class="page">
+  <aside class="side">
+    <div class="photo">
+      <img src="photo.jpg" alt="Ayush Bhagwate" onerror="this.remove()">
+      <span>AB</span>
+    </div>
+
+    <h2>Contact</h2>
+    <div class="row"><svg viewBox="0 0 24 24"><path d="M2 5.5h20a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1Zm.7 1.6 9.3 6.2 9.3-6.2H2.7Z"/></svg><a href="mailto:ayushytl11@gmail.com">ayushytl11@gmail.com</a></div>
+    <div class="row"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.57 3.6a1 1 0 0 1-.25 1l-2.2 2.2Z"/></svg>+91 86693 26086</div>
+    <div class="row"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>Maharashtra, India</div>
+    <div class="row"><svg viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM.5 8.5h4V24h-4V8.5Zm7 0h3.83v2.11h.05c.53-1 1.84-2.11 3.79-2.11 4.05 0 4.8 2.67 4.8 6.14V24h-4v-6.85c0-1.63-.03-3.73-2.27-3.73-2.27 0-2.62 1.78-2.62 3.61V24h-4V8.5Z"/></svg><a href="https://linkedin.com/in/ayushbhagwate">/ayushbhagwate</a></div>
+    <div class="row"><svg viewBox="0 0 24 24"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.94c.57.1.78-.25.78-.55v-2c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.73 1.27 3.4.97.1-.76.4-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.46.11-3.05 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 5.83 0c2.22-1.5 3.2-1.18 3.2-1.18.63 1.59.23 2.76.11 3.05.75.81 1.2 1.84 1.2 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.05.78 2.12v3.14c0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg><a href="https://github.com/AyushBhagwate">/AyushBhagwate</a></div>
+
+    <h2>Skills</h2>
+    <div class="skillcat">Languages</div>
+    <div class="chips"><span>Python</span><span>SQL</span><span>HTML</span><span>CSS</span></div>
+    <div class="skillcat">ML / DL</div>
+    <div class="chips"><span>Scikit-learn</span><span>TensorFlow</span><span>Deep Learning</span></div>
+    <div class="skillcat">Data &amp; Tools</div>
+    <div class="chips"><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>Git</span></div>
+
+    <h2>Certifications</h2>
+    <ul>
+      <li>ML Specialization — DeepLearning.AI × Stanford</li>
+      <li>Deep Learning Specialization — DeepLearning.AI</li>
+      <li>Python for ML &amp; SQL — ASG Vision</li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <div class="name">Ayush Bhagwate</div>
+    <div class="role">Machine Learning &amp; Deep Learning Engineer</div>
+
+    <h2>Summary</h2>
+    <p class="summary">Electronics &amp; Telecommunication Engineering graduate (2025) focused on Machine Learning and Deep Learning. I build end-to-end ML pipelines — from EDA and feature engineering to model training, tuning and evaluation — using Python, Scikit-learn and TensorFlow. Completed the Machine Learning and Deep Learning Specializations by DeepLearning.AI.</p>
+
+    <h2>Experience</h2>
+    <div class="item">
+      <div class="top"><span class="t">Web Development Intern</span><span class="d">Aug – Oct 2024</span></div>
+      <div class="org">OctaNet Services Pvt. Ltd.</div>
+      <ul>
+        <li>Built responsive web interfaces with HTML, CSS and JavaScript across project tasks.</li>
+        <li>Collaborated in a delivery team; recognized for dedication and a fast learning curve.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="top"><span class="t">Head Event Coordinator</span><span class="d">2024 – 2025</span></div>
+      <div class="org">Electronics &amp; Technocrats Associates (ETA) Club</div>
+      <ul>
+        <li>Led student volunteer teams and coordinated with faculty to deliver technical events.</li>
+        <li>Managed execution under deadlines — leadership, communication and decision-making.</li>
+      </ul>
+    </div>
+
+    <h2>Projects</h2>
+    <div class="proj"><span class="t">Titanic Survival Prediction</span> · <span class="tech">Scikit-learn</span><p>End-to-end classification with Logistic Regression — EDA, preprocessing, evaluation.</p></div>
+    <div class="proj"><span class="t">Wine Classification</span> · <span class="tech">Random Forest</span><p>Multi-class classification with ensemble learning and hyperparameter tuning.</p></div>
+    <div class="proj"><span class="t">Customer Segmentation</span> · <span class="tech">K-Means</span><p>Unsupervised clustering into behavioural customer segments.</p></div>
+
+    <h2>Education</h2>
+    <div class="item">
+      <div class="top"><span class="edu t">B.E., Electronics &amp; Telecommunication</span><span class="d">2025</span></div>
+      <div class="edu m">JDIET, Amravati University · CGPA 6.64 / 10</div>
+    </div>
+    <div class="item">
+      <div class="top"><span class="edu t">Higher Secondary (HSC)</span></div>
+      <div class="edu m">Jagdamba Junior Science College, Yavatmal · 90%</div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
